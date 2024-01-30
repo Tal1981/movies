@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+@media (max-width: 576px) {
+  .movie_page {
+    flex-direction: column-reverse; 
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: auto !important;
+  overflow-x: hidden !important;
+  font-family: 'Ubuntu', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+}
+
+/*----------------------------- navbar -----------------------------*/
+.Navbar {
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+
+.logo {
+  width: 35px;
+  margin-left: 3px;
+}
+
+.search_box {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 13px;
+  padding: 2px 0;
+}
+
+.nav_col_left {
+  flex: 1;
+  width: fit-content;
+}
+
+.nav_col_right {
+  flex: 0;
+  text-align: right;
+  width: fit-content;
+}
+
+.search_input {
+  width: 90%;
+  margin-left: 16px;
+  border: none;
+  outline: none;
+  direction: ltr;
+  border-radius: 25%;
+}
+
+.search_input::placeholder {
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.5),
+    -0.5px -0.5px 4px rgba(0, 0, 0, 0.5);
+}
+
+.logo_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo_text {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0px 0px 1.5px #000, 0px 0px 1.5px #000,
+    1px 1px 3px #ff0, -1px -1px 3px #ff0;
+}
+
+/*----------------------------- MoviesList Component -----------------------------*/
+.movieslist {
+  margin: 40px 0 20px !important;
+}
+
+.card_movie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0;
+  border-radius: 3%;
+  border: 4px solid rgba(0, 0, 0, 0);
+  outline-color: rgba(255, 165, 0, 0.8);
+  outline-style: dashed;
+  outline-width: 3px;
+  overflow: hidden;
+  transition: all 2s ease-in-out;
+}
+
+.card_movie:hover {
+  transform: translate(0%, 1%);
+  outline-color: rgba(255, 165, 0, 0.6);
+}
+
+.overlay_movie_name {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  border-radius: 3%;
+  text-shadow: 1px 1px 1px #000;
+  cursor: pointer;
+  transition: all 2s ease-in-out;
+  opacity: 0;
+}
+
+.overlay_movie_name:hover {
+  opacity: 1;
+}
+
+.text_movie {
+  margin: 8px;
+  padding: 8px;
+  text-align: center;
+}
+
+.text_movie h6 {
+  padding: 13px;
+  background-color: rgba(0, 0, 0, .5);
+  margin-bottom: 16px;
+  line-height: 16px;
+}
+
+.text_movie>p {
+  font-size: 15px;
+  line-height: 14px;
+}
+
+.img_movie {
+  width: 100%;
+  text-align: center;
+  border-radius: 3%;
+}
+
+span.page-link {
+  background-color: orange !important;
+}
+
+/*----------------------------- MovieDetails Component -----------------------------*/
+.button {
+  transition: all .8s ease-in-out;
+}
+
+.button:hover {
+  background-color: orange !important;
+  color: #eee;
+}
+
+.details_txt {
+  color: #aaa;
+}
+
+.img_fullScreen {
+  height: 100vh;
+}
+
+.close_icon {
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/*----------------------------- Loading Component -----------------------------*/
+.spinnar_loading_box {
+  height: 80vh !important;
+}
