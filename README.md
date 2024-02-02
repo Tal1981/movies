@@ -1,6 +1,6 @@
 # movies
 
-##A small react project as movies database
+## A small react project as movies database
 
 It completed with `Reactjs` , `Bootstrap` and `a public API` .
 
