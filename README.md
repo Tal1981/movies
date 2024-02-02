@@ -2,7 +2,7 @@
 
 ## A small react project as movies database
 
-It completed with `Reactjs` , `Bootstrap` and `a public API` .
+It is accomplished using `Reactjs` , `Bootstrap` and `a public API` .
 
 > 💡 You can visit the website on this link [click here](https://tal1981.github.io/movies/)
 
