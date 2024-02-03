@@ -33,7 +33,8 @@ const MoviesList = ({ movi, val }) => {
                   return (
                     <Cardmovies item={item} key={item.rank} />
                   )
-                })) : <p style={{ textAlign: 'center' }}>{`No Result With ${val}`}</p>)
+                }))
+                  : <p style={{ textAlign: 'center' }}>{`No Result With ${val}`}</p>)
                   : (movi.length >= 1 ? (movi.filter(mov =>
                     mov.rank >= end - 15 && mov.rank <= end).map((item) => {
                       return (
