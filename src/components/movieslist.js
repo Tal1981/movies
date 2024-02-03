@@ -6,19 +6,22 @@ import Cardmovies from './cardmovies';
 import Loading from './loading';
 
 const MoviesList = ({ movi, val }) => {
-
-  const [end, setEnd] = useState(16)
+  // end = It is an indicator that changes when the page number is clicked
+  const [end, setEnd] = useState(16);
   const [isLoading, setIsLoading] = useState(false);
 
+
+
   useEffect(() => {
-    setIsLoading(true)
+    setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
     }, 4000);
+    console.log("rerender")
   }, [])
 
   const rendering = (page) => {
-    setEnd(page * 16)
+    setEnd(page * 16);
   }
 
   return (
@@ -29,7 +32,7 @@ const MoviesList = ({ movi, val }) => {
           (
             <>
               <Row className="movieslist">
-                {val !== '' ? (movi.length >= 1 ? (movi.map((item) => {
+                {val !== '' ? (movi.length >= 1 ? (movi.map((item) => { //! val = the value in the search engine: (input) tag
                   return (
                     <Cardmovies item={item} key={item.rank} />
                   )
@@ -46,6 +49,20 @@ const MoviesList = ({ movi, val }) => {
               </Row>
               <Row>
                 <PageNav end={end} rendering={rendering} movi={movi} />
+              </Row>
+              <Row className="mb-5 mt-3" style={{ transition: "all 0.5s ease-in-out" }}>
+                <div className="back_to_up text-center position-relative mb-5">
+                  <p className="position-absolute start-50 translate-middle-x font-monospace"
+                    style={{ top: "-55px", color: "#FFA500", textShadow: "0 2px #aaa", cursor: "pointer", fontSize: "75PX" }}
+                    onClick={() => window.scrollTo(0,0)}>
+                    ^
+                  </p>
+                  <p className="position-absolute start-50 translate-middle-x d-inline fs-5 fw-bolder
+                    text-decoration-underlineg" style={{ top: "-4px", color: "#FFA500", textShadow: "0 2px #999", cursor: "pointer"}}
+                    onClick={() => window.scrollTo(0,0)}>
+                    TOP
+                  </p>
+                </div>
               </Row>
             </>
           )

@@ -77,4 +77,4 @@
  * @license MIT
  */
 
-//! It's triggaring when the search engine gets en input
+//! It's triggering when the search engine gets en input

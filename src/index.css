@@ -165,6 +165,22 @@ span.page-link {
   background-color: orange !important;
 }
 
+a.page-link:hover {
+  background-color: rgba(255, 165, 0, 0.7) !important;
+}
+
+.back_to_up {
+  background-color: black !important;
+  transition: all 3s;
+  animation: back_to_up 3s ease-in-out infinite;
+}
+
+@keyframes back_to_up {
+  0% {transform : translateY(0px)}
+  50% {transform : translateY(30px)}
+  100% {transform : translateY(00px)}
+}
+
 /*----------------------------- MovieDetails Component -----------------------------*/
 .button {
   transition: all .8s ease-in-out;

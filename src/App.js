@@ -12,7 +12,7 @@ let val = ''; //value in search engine
 const App = () => {
   const [movi, setMovi] = useState(moviesDB)
 
-  //! It's triggaring when the search engine gets en input
+  //! It's triggering when the search engine gets en input
   const getSearch = (searchValue) => {
     val = searchValue.toLowerCase();
     let searchResult = moviesDB.filter(mov => {
