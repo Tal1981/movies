@@ -9,6 +9,7 @@ const MovieDetails = ({ movie }) => {
 
   const handle = useFullScreenHandle()
 
+
   const openFullScreen = () => {
     handle.enter();
   };
@@ -62,13 +63,13 @@ const MovieDetails = ({ movie }) => {
             <Link to={movie?.trailer}>
               <button className="bg-warning border-bottom border-0 m-3 py-2 px-4 rounded shadow button">Trailer</button>
             </Link>
-            <Link to="/">
+            <Link to="/" onClick={() => window.scrollTo(0, 0)}>
               <button className="bg-warning border-bottom border-0 m-3 py-2 px-4 rounded shadow button">Back</button>
             </Link>
           </div>
         </div>
-        <div className='p-3 bg-light  border-bottom'>
 
+        <div className='p-3 bg-light  border-bottom'>
           <FullScreen handle={handle}>
             {handle.active ? (
               <div className='position-relative d-flex justify-content-center bg bg-secondary'>
